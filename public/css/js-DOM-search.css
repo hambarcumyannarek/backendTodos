@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form {
+    position: relative;
+}
+
+.search {
+    width: 500px;
+    padding: 0 5px;
+    height: 60px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+    padding-right: 160px;
+    font-size: 1.1em;
+}
+
+.search:focus {
+    box-shadow: none;
+    border: 2px solid #5B00DB;
+}
+
+.add-list {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    height: 52px;
+    padding: 0 40px;
+    font-size: 1.1em;
+    color: #fff;
+    background: #5B00DB;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.5s;
+}
+
+.add-list:hover {
+    background: #fff;
+    color: rgba(0,0,0,0.8);
+    border: 2px solid #5B00DB;
+}
+
+.list {
+    position: relative;
+    width: 500px;
+    list-style: none;
+    font-size: 1.1em;
+    padding: 15px 10px;
+    min-height: 45px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.8);
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+.list label {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 8px;
+}
+
+
+.list label input {
+    width: 15px;
+    height: 15px;
+    accent-color: #5B00DB;
+}
+
+
+.list > i {
+    color: rgba(0,0,0,0.8);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+
+.list > i:hover {
+    color: #5B00DB;
+}
+
+.completed {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1em;
+}
+
+.completed > button {
+    padding: 12px 30px;
+    cursor: pointer;
+    color: white;
+    background: #5B00DB;
+    border: none;
+    border-radius: 5px;
+    transition: all 0.5s;
+}
+
+.completed > button:hover {
+    background: #45108f;
+}
+
+
+::-webkit-scrollbar {
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    height: 2px;
+    background: #5B00DB;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(91,0,219, 0.5);
+
+}
+
+::-webkit-scrollbar-track {
+    padding: 2px 0;
+    background: rgba(91,0,219, 0.01);
+    border-radius: 5px;
+}
+
+.elemText {
+    width: 291px;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.list.active > .elemText {
+    pointer-events: none;
+}
